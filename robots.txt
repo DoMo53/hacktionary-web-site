@@ -1,0 +1,21 @@
+# robots.txt для сайта HACKtionary
+
+User-agent: *
+# Разрешено всё, кроме указанных ниже:
+Disallow: /404.html
+Disallow: /js/
+Disallow: /css/
+Disallow: /assets/
+Disallow: /data/
+Disallow: /favicon.ico
+Disallow: /robots.txt
+Disallow: /sitemap.xml
+
+
+Allow: /
+
+
+Sitemap: https://hacktionary.web-prj.ru/sitemap.xml
+
+
+Host: hacktionary.web-prj.ru

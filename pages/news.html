@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Новости кибербезопасности — HACKtionary</title>
+    <meta name="description"
+        content="Актуальные новости и аналитика из мира информационной безопасности. Отчёты о кибератаках, стандартах, IoT, Zero Trust и защите данных.">
+    <meta name="keywords"
+        content="новости, кибербезопасность, информационная безопасность, Zero Trust, IoT, OWASP, угрозы, аналитика">
+    <link rel="canonical" href="https://hacktionary.web-prj.ru/news">
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="nocopy">
+    <img class="image-gradient" src="../assets/images/gradient.png" alt="" />
+    <div class="layer-blur"></div>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo"><a href="../index.html">HACKtionary</a></h1>
+        <nav class="site-nav">
+            <a href="about.html">О проекте</a>
+            <a href="terms.html">Словарь</a>
+            <a href="news.html" class="active">Новости</a>
+            <a href="resourses.html">Ресурсы</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="tag-box">
+                <div class="tag">НОВОСТИ</div>
+            </div>
+            <h1 class="section-title">Новости кибербезопасности</h1>
+            <p class="lead narrow">Актуальные новости и отчёты из мира ИБ. Перелистывай карточки, чтобы быть в курсе.
+            </p>
+        </section>
+
+        <section class="container news-rail">
+            <button class="rail-arrow" type="button" aria-label="Назад" data-dir="prev">‹</button>
+            <div class="news-scroller">
+                <div class="news-track" id="newsTrack"><!-- cards inject here --></div>
+            </div>
+            <button class="rail-arrow" type="button" aria-label="Вперёд" data-dir="next">›</button>
+        </section>
+    </main>
+
+    <footer class="container">
+        <small>© 2025 HACKtionary. Тексты и материалы защищены. Перепубликация без согласия запрещена.</small>
+        <a href="terms-of-use.html">Правила использования</a>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="../js/guard.js"></script>
+
+    <!-- Данные + рендер -->
+    <script src="../js/data/news.data.js"></script>
+    <script src="../js/news.js"></script>
+</body>
+
+</html>

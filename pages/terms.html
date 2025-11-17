@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Словарь терминов по информационной безопасности — HACKtionary</title>
+    <meta name="description"
+        content="Ищи и изучай термины по кибербезопасности. Подробные объяснения и ссылки на официальные источники: NIST, ISO, OWASP и другие.">
+    <meta name="keywords"
+        content="термины ИБ, словарь, кибербезопасность, NIST, ISO, OWASP, Zero Trust, шифрование, уязвимость, фишинг">
+    <link rel="canonical" href="https://hacktionary.web-prj.ru/terms">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="nocopy">
+    <img class="image-gradient" src="../assets/images/gradient.png" alt="">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <!-- header (относительные ссылки, чтобы работал file://) -->
+        <header>
+            <h1 class="logo"><a href="../index.html">HACKtionary</a></h1>
+            <nav class="site-nav">
+                <a href="./about.html">О проекте</a>
+                <a href="./terms.html" class="active">Словарь</a>
+                <a href="./news.html">Новости</a>
+                <a href="./resourses.html">Ресурсы</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="about-hero-main" style="margin-top:2rem">
+                <div class="tag-box">
+                    <div class="tag">СЛОВАРЬ</div>
+                </div>
+                <h1>Поиск терминов по информационной безопасности</h1>
+                <p>Вводи термин — получай краткое объяснение и ссылки на первоисточники.</p>
+
+                <form id="termsSearchForm" class="terms-search" autocomplete="off" role="search">
+                    <input id="termQuery" type="search" placeholder="Например: конфиденциальность, фишинг, Zero Trust…"
+                        aria-label="Поиск терминов">
+                    <button type="submit" class="btn-get-started glow-sm">Найти</button>
+                </form>
+                <small id="termsCounter" class="muted"></small>
+            </section>
+
+
+            <section class="terms-rail" aria-label="Лента терминов">
+                <div class="terms-scroller" id="termsScroller">
+                    <div class="terms-track" id="termsTrack">
+
+                    </div>
+                </div>
+
+                <div class="terms-arrows">
+                    <button class="rail-arrow" type="button" data-dir="prev" aria-label="Назад">‹</button>
+                    <button class="rail-arrow" type="button" data-dir="next" aria-label="Вперёд">›</button>
+                </div>
+            </section>
+        </main>
+
+
+        <div id="termModal" class="term-modal hidden" aria-hidden="true" role="dialog" aria-labelledby="termModalTitle">
+            <div class="term-modal__backdrop" data-close></div>
+            <div class="term-modal__dialog" role="document">
+                <button class="term-modal__close" type="button" data-close aria-label="Закрыть">×</button>
+                <h2 id="termModalTitle"></h2>
+                <p id="termModalDef" class="term-modal__def"></p>
+                <div id="termModalUsage" class="term-modal__usage"></div>
+                <div id="termModalSources" class="term-modal__sources"></div>
+            </div>
+        </div>
+
+
+        <footer class="container" style="margin-top:2rem">
+            <small>© 2025 HACKtionary. Тексты и материалы защищены. Перепубликация без согласия запрещена.</small>
+            <a href="terms-of-use.html">Правила использования</a>
+        </footer>
+    </div>
+
+    <script src="../js/data/terms.data.js"></script>
+    <script src="../js/terms.js"></script>
+    <script src="../js/guard.js"></script>
+</body>
+
+</html>

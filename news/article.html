@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Статья — HACKtionary</title>
+
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="description" content="Статья HACKtionary по кибербезопасности." />
+</head>
+
+<body class="nocopy">
+    <img class="image-gradient" src="../assets/images/gradient.png" alt="">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1 class="logo"><a href="../index.html">HACKtionary</a></h1>
+            <nav class="site-nav">
+                <a href="../pages/about.html">О проекте</a>
+                <a href="../pages/terms.html">Словарь</a>
+                <a href="../pages/news.html" class="active">Новости</a>
+                <a href="../pages/resourses.html">Ресурсы</a>
+            </nav>
+        </header>
+
+        <main class="article">
+            <nav class="article-breadcrumbs" id="crumbs">
+                <a href="../index.html">Главная</a> ·
+                <a href="../pages/news.html">Новости</a> ·
+                <span id="crumbCurrent">Статья</span>
+            </nav>
+
+            <!-- HERO -->
+            <header class="article-hero">
+                <div class="tag-box" aria-hidden="true">
+                    <div class="tag" id="tagCat">СТАТЬЯ</div>
+                </div>
+
+                <!-- левая колонка -->
+                <div>
+                    <h1 class="article-title" id="title">Заголовок статьи</h1>
+                    <p class="article-subtitle" id="subtitle">Краткое описание статьи.</p>
+                </div>
+
+                <!-- правая колонка -->
+                <aside>
+                    <div class="article-meta">
+                        <span>Автор: <strong id="author">HACKtionary</strong></span>
+                        <span>Дата: <time id="date" datetime=""></time></span>
+                        <span id="readTime">~ 2 мин</span>
+                    </div>
+                    <div class="article-tags" id="tags"></div>
+                </aside>
+            </header>
+
+            <!-- обложка -->
+            <figure class="article-cover" id="coverWrap" hidden>
+                <img id="cover" src="" alt="">
+                <figcaption id="coverAlt"></figcaption>
+            </figure>
+
+            <!-- контент статьи -->
+            <article class="article-content prose" id="content">
+                <!-- HTML контент придёт из базы -->
+            </article>
+
+            <!-- навигация по статье -->
+            <nav class="article-nav">
+                <a class="article-nav__link" href="../pages/news.html">← К списку новостей</a>
+                <div class="article-nav__spacer"></div>
+                <a class="article-nav__link" id="nextLink" href="#">Следующая статья →</a>
+            </nav>
+
+            <!-- поделиться -->
+            <aside class="article-share">
+                <span class="muted">Поделиться:</span>
+                <a class="share-chip" href="#" id="shareCopy">Ссылка</a>
+                <a class="share-chip" id="shareTg" target="_blank" rel="noopener">Telegram</a>
+            </aside>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <small>© 2025 HACKtionary. Тексты и материалы защищены. Перепубликация без согласия запрещена.</small>
+            <a href="../pages/terms-of-use.html">Правила использования</a>
+        </footer>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- данные и логика рендера статьи -->
+    <script src="../js/data/news.data.js"></script>
+    <script src="../js/news-article.js"></script>
+</body>
+
+</html>
